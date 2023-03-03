@@ -7,7 +7,7 @@ import cartIcon from "../images/icons/cart-fill.svg";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary px-5">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow-sm">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             <img src={blackLogo} height="30" alt="" />
