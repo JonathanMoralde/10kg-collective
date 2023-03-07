@@ -1,14 +1,14 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import blackLogo from "../images/logo/10KG BLACK trimmed.png";
-import personIcon from "../images/icons/person-fill.svg";
-import cartIcon from "../images/icons/cart-fill.svg";
+
+import { FaUser, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary px-5 shadow-sm">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+        <div className="container-fluid container-fix">
           <Link className="navbar-brand" to="/">
             <img src={blackLogo} height="30" alt="" />
           </Link>
@@ -54,17 +54,12 @@ const Navbar = () => {
             <ul className="navbar-nav flex-row">
               <li className="nav-item">
                 <NavLink to="/" className="nav-link">
-                  <img
-                    src={personIcon}
-                    alt="Bootstrap"
-                    width="24"
-                    height="24"
-                  />
+                  <FaUser size="1.5rem" />
                 </NavLink>
               </li>
-              <li className="nav-item ms-1">
-                <NavLink to="/" className="nav-link">
-                  <img src={cartIcon} alt="Bootstrap" width="24" height="24" />
+              <li className="nav-item ms-1 ">
+                <NavLink to="/" className="nav-link padding-right-fix">
+                  <FaShoppingCart size="1.5rem" />
                 </NavLink>
               </li>
             </ul>

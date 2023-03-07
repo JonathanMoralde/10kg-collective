@@ -5,6 +5,9 @@ import video from "../images/hero/advert.mp4";
 import poster1 from "../images/hero/1.png";
 import poster2 from "../images/hero/2.png";
 import poster3 from "../images/hero/3.png";
+import ttpPoster from "../images/Posters/TTP.jpg";
+import weightlessClone from "../images/Posters/WeightlessClone.jpg";
+import { FaShapes, FaTshirt, FaShippingFast } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -14,8 +17,8 @@ const Home = () => {
           <div className="hero-text d-grid col-lg-5">
             <div className="hero-text-container ">
               <p>Introducing our newest release</p>
-              <img src={title} alt="Title" className="hero-title" />
-              <p className="hero-sub-title">
+              <img src={title} alt="Title" className="hero-title mt-3" />
+              <p className="hero-sub-title mt-3">
                 Simplicity is the ultimate sophistication
               </p>
               <Link className="btn btn-secondary">SHOP NOW</Link>
@@ -114,6 +117,69 @@ const Home = () => {
           </div>
         </div>
       </main>
+
+      <section className="container-fluid collection-section container-fix">
+        <h3 className="section-title ">All Collections</h3>
+        <div className="collection-container">
+          <div className="row ">
+            <div className="col-lg-8">
+              <div className="card text-bg-dark main-card mt-md-3 ">
+                <img src={poster1} className="card-img" alt="Plain Series" />
+                <div className="card-img-overlay">
+                  <h5 className="card-title">Plain Series</h5>
+                  <Link className="btn btn-secondary">SHOP NOW</Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="card text-bg-dark side-card mt-md-3 ">
+                <img
+                  src={weightlessClone}
+                  className="card-img"
+                  alt="Plain Series"
+                />
+                <div className="card-img-overlay">
+                  <h5 className="card-title">Weightless</h5>
+                  <Link className="btn btn-secondary">SHOP NOW</Link>
+                </div>
+              </div>
+              <div className="card text-bg-dark side-card mt-md-3 ">
+                <img src={ttpPoster} className="card-img" alt="Plain Series" />
+                <div className="card-img-overlay">
+                  <h5 className="card-title">Trust the Process</h5>
+                  <Link className="btn btn-secondary">SHOP NOW</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container quality-section container-fix">
+        <div className="row">
+          <div className="col-lg-4">
+            <FaShapes size="6.25rem" />
+            <h5 className="quality-title mt-4">Inclusive Sizing</h5>
+            <p className="quality-text mt-2">
+              Offering sizes that range from XS to XL
+            </p>
+          </div>
+          <div className="col-lg-4">
+            <FaTshirt size="6.25rem" />
+            <h5 className="quality-title mt-4">Quality Material</h5>
+            <p className="quality-text mt-2">
+              Each garment is made of 100% cotton
+            </p>
+          </div>
+          <div className="col-lg-4">
+            <FaShippingFast size="6.25rem" />
+            <h5 className="quality-title mt-4">Free Shipping</h5>
+            <p className="quality-text mt-2">
+              We provide free shipping in Polangui Area
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
